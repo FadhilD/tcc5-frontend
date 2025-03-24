@@ -17,7 +17,7 @@ const Edit = () => {
     const Update = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/notes/${id}`, {
+            await axios.patch(`https://tcc5-backend-21569344527.us-central1.run.app/notes/${id}`, {
                 judul,
                 deadline,
                 matakuliah,
@@ -31,7 +31,7 @@ const Edit = () => {
 
     const getById = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/notes/${id}`);
+            const response = await axios.get(`https://tcc5-backend-21569344527.us-central1.run.app/notes/${id}`);
             setJudul(response.data.judul);
             setDeadline(response.data.deadline);
             setMatakuliah(response.data.matakuliah);

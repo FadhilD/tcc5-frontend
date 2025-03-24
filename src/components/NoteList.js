@@ -11,7 +11,7 @@ const NoteList = () => {
 
     const getNotes = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/notes');
+            const response = await axios.get('https://tcc5-backend-21569344527.us-central1.run.app/notes/notes');
             setNotes(response.data);
         } catch (error) {
             console.error("Error fetching notes:", error);
@@ -20,7 +20,7 @@ const NoteList = () => {
 
     const deleteNote = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/notes/${id}`);
+            await axios.delete(`https://tcc5-backend-21569344527.us-central1.run.app/notes/${id}`);
             getNotes();
         } catch (error) {
             console.log(error);
