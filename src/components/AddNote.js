@@ -12,7 +12,7 @@ const AddNote = () => {
     const saveNote = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://tcc5-backend-21569344527.us-central1.run.app/notes', {
+            await axios.post('https://notes-be-fadhil-21569344527.us-central1.run.app/notes', {
                 judul,
                 deadline,
                 matakuliah,
