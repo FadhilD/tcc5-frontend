@@ -11,7 +11,7 @@ const NoteList = () => {
 
     const getNotes = async () => {
         try {
-            const response = await axios.get('https://tcc5-backend-21569344527.us-central1.run.app/notes/notes');
+            const response = await axios.get('https://tcc5-backend-21569344527.us-central1.run.app/notes');
             setNotes(response.data);
         } catch (error) {
             console.error("Error fetching notes:", error);
